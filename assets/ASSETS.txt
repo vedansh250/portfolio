@@ -1,0 +1,12 @@
+Images downloaded automatically (open-source / brand icons):
+
+HERO
+  hero-devops.png  - DevOps toolchain (Wikimedia Commons)
+
+SKILLS & PROJECTS (Devicon - MIT)
+  aws.svg, docker.svg, kubernetes.svg, terraform.svg
+  jenkins.svg, github-actions.svg, linux.svg, python.svg, mysql.svg
+  prometheus.svg (projects only)
+
+CERTIFICATIONS (brand icons as placeholders)
+  aws-saa.svg, aws-devops.svg, cka.svg, terraform.svg, docker.svg

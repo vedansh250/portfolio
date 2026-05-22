@@ -13,11 +13,32 @@ const navLinks = document.getElementById('navLinks');
 
 navToggle?.addEventListener('click', () => {
   navLinks.classList.toggle('open');
+
+  // Change icon
+  const icon = navToggle.querySelector('i');
+
+  if (navLinks.classList.contains('open')) {
+    icon.classList.remove('fa-bars');
+    icon.classList.add('fa-xmark');
+  } else {
+    icon.classList.remove('fa-xmark');
+    icon.classList.add('fa-bars');
+  }
 });
 
+// Close menu after click
 navLinks?.querySelectorAll('a').forEach((link) => {
-  link.addEventListener('click', () => navLinks.classList.remove('open'));
+  link.addEventListener('click', () => {
+    navLinks.classList.remove('open');
+
+    const icon = navToggle.querySelector('i');
+    icon.classList.remove('fa-xmark');
+    icon.classList.add('fa-bars');
+  });
 });
+
+
+
 
 // Active nav link on scroll
 const sections = document.querySelectorAll('section[id], footer[id]');
@@ -47,7 +68,7 @@ if (skillsTrack) {
   cards.forEach((card) => {
     const clone = card.cloneNode(true);
     clone.setAttribute('aria-hidden', 'true');
-    skillsTrack.appendChild(clone);
+    skillsTrack.appendChild(clone); 
   });
 }
 
